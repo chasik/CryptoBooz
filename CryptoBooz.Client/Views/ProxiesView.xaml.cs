@@ -3,11 +3,11 @@
 namespace CryptoBooz.Client.Views
 {
     /// <summary>
-    /// Interaction logic for ExchangesView.xaml
+    /// Interaction logic for ProxiesView.xaml
     /// </summary>
-    public partial class ExchangesView : UserControl
+    public partial class ProxiesView : UserControl
     {
-        public ExchangesView()
+        public ProxiesView()
         {
             InitializeComponent();
         }

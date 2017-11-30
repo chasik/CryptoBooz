@@ -44,13 +44,20 @@ namespace CryptoBooz.Client.ViewModel
 
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<ExchangesViewModel>();
+            SimpleIoc.Default.Register<AccountsViewModel>();
+            SimpleIoc.Default.Register<ProcessViewModel>();
+            SimpleIoc.Default.Register<ProxiesViewModel>();
+
         }
 
         private static void SetupNavigation()
         {
             var navigationService = new FrameNavigationService();
+
             navigationService.Configure("ExchangesView", new Uri("../Views/ExchangesView.xaml", UriKind.Relative));
-            //navigationService.Configure("", new Uri("", UriKind.Relative));
+            navigationService.Configure("AccountsView", new Uri("../Views/AccountsView.xaml", UriKind.Relative));
+            navigationService.Configure("ProxiesView", new Uri("../Views/ProxiesView.xaml", UriKind.Relative));
+            navigationService.Configure("ProcessView", new Uri("../Views/ProcessView.xaml", UriKind.Relative));
 
             SimpleIoc.Default.Register<IFrameNavigationService>(() => navigationService);
         }
@@ -62,6 +69,12 @@ namespace CryptoBooz.Client.ViewModel
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
 
         public ExchangesViewModel Exchanges => ServiceLocator.Current.GetInstance<ExchangesViewModel>();
+
+        public AccountsViewModel Accounts => ServiceLocator.Current.GetInstance<AccountsViewModel>();
+
+        public ProcessViewModel Process => ServiceLocator.Current.GetInstance<ProcessViewModel>();
+
+        public ProxiesViewModel Proxies => ServiceLocator.Current.GetInstance<ProxiesViewModel>();
 
 
         /// <summary>

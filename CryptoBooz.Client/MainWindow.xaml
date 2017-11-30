@@ -3,9 +3,10 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
                       
-                      MinHeight="500" MinWidth="700"  
-                      BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
-                      Title="{Binding WelcomeTitle}" ShowIconOnTitleBar="True"
+                      MinHeight="400" MinWidth="630" Height="550" Width="870"
+                      Icon="CryptoBooz.ico" BorderThickness="1" ShowIconOnTitleBar="True"
+                      BorderBrush="{DynamicResource AccentColorBrush}" 
+                      Title="{Binding WelcomeTitle}" 
                       DataContext="{Binding Main, Source={StaticResource Locator}}">
 
     <Window.Resources>
@@ -30,7 +31,7 @@
                                Text="Биржи" />
                 </StackPanel>
             </Button>
-            <Button>
+            <Button Command="{Binding AccountsViewCommand}">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="20" Height="20"
                                Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
@@ -42,7 +43,7 @@
                                Text="Аккаунты" />
                 </StackPanel>
             </Button>
-            <Button>
+            <Button  Command="{Binding ProxiesViewCommand}">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="20" Height="20"
                                Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
@@ -54,7 +55,7 @@
                                Text="Proxy" />
                 </StackPanel>
             </Button>
-            <Button>
+            <Button  Command="{Binding ProcessViewCommand}">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="20" Height="20"
                                Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
@@ -69,8 +70,8 @@
         </controls:WindowCommands>
     </controls:MetroWindow.RightWindowCommands>
 
-    <Frame x:Name="MainFrame">
-        
+    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden">
+
     </Frame>
 
 </controls:MetroWindow>

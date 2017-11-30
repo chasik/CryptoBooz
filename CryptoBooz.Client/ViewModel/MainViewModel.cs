@@ -13,12 +13,14 @@ namespace CryptoBooz.Client.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        private readonly IDataService _dataService;
-
         private string _welcomeTitle = string.Empty;
 
+        private readonly IFrameNavigationService _navigationService;
+
         private RelayCommand _exchangesCommand;
-        private IFrameNavigationService _navigationService;
+        private RelayCommand _accountsViewCommand;
+        private RelayCommand _proxiesViewCommand;
+        private RelayCommand _processViewCommand;
 
         /// <summary>
         /// Gets the WelcomeTitle property.
@@ -35,10 +37,9 @@ namespace CryptoBooz.Client.ViewModel
         /// </summary>
         public MainViewModel(IDataService dataService, IFrameNavigationService navigationService)
         {
-            _dataService = dataService;
             _navigationService = navigationService;
 
-            _dataService.GetData(
+            dataService.GetData(
                 (item, error) =>
                 {
                     if (error != null)
@@ -53,14 +54,21 @@ namespace CryptoBooz.Client.ViewModel
 
         #region | Commands |
 
-        public RelayCommand ExchangesViewCommand
-        {
-            get
-            {
-                return _exchangesCommand ?? (_exchangesCommand =
-                           new RelayCommand(() => _navigationService.NavigateTo("ExchangesView")));
-            }
-        }
+        public RelayCommand ExchangesViewCommand => _exchangesCommand ??
+                                                    (_exchangesCommand = new RelayCommand(() =>
+                                                        _navigationService.NavigateTo("ExchangesView")));
+
+        public RelayCommand AccountsViewCommand => _accountsViewCommand ??
+                                                   (_accountsViewCommand = new RelayCommand(() =>
+                                                       _navigationService.NavigateTo("AccountsView")));
+
+        public RelayCommand ProxiesViewCommand => _proxiesViewCommand ??
+                                                  (_proxiesViewCommand = new RelayCommand(() =>
+                                                      _navigationService.NavigateTo("ProxiesView")));
+
+        public RelayCommand ProcessViewCommand => _processViewCommand ??
+                                                  (_processViewCommand = new RelayCommand(() =>
+                                                      _navigationService.NavigateTo("ProcessView")));
 
         #endregion
 
