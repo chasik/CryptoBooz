@@ -214,11 +214,11 @@
       <Project>{22205e36-8b9c-44a7-b13d-b49cf9e0f0c6}</Project>
       <Name>CryptoBooz.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CryptoBooz.Parser.Interfaces\CryptoBooz.Parsers.Interfaces.csproj">
+    <ProjectReference Include="..\CryptoBooz.Parsers.Interfaces\CryptoBooz.Parsers.Interfaces.csproj">
       <Project>{6a84516f-d151-4b9a-b306-c9d42fe8937a}</Project>
       <Name>CryptoBooz.Parsers.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CryptoBooz.Parser\CryptoBooz.Parsers.csproj">
+    <ProjectReference Include="..\CryptoBooz.Parsers\CryptoBooz.Parsers.csproj">
       <Project>{53c3f2a0-5304-4936-979f-695602f2cd83}</Project>
       <Name>CryptoBooz.Parsers</Name>
     </ProjectReference>

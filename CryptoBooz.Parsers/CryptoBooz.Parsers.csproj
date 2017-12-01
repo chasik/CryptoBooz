@@ -59,7 +59,7 @@
       <Project>{3F7F2FE1-C93C-4692-B7F3-7EA5A6790011}</Project>
       <Name>CryptoBooz.Model.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CryptoBooz.Parser.Interfaces\CryptoBooz.Parsers.Interfaces.csproj">
+    <ProjectReference Include="..\CryptoBooz.Parsers.Interfaces\CryptoBooz.Parsers.Interfaces.csproj">
       <Project>{6A84516F-D151-4B9A-B306-C9D42FE8937A}</Project>
       <Name>CryptoBooz.Parsers.Interfaces</Name>
     </ProjectReference>

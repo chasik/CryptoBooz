@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Model.Enums", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Client", "CryptoBooz.Client\CryptoBooz.Client.csproj", "{5EA27069-4AC4-42BF-B21C-02C599077A52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Parsers", "CryptoBooz.Parser\CryptoBooz.Parsers.csproj", "{53C3F2A0-5304-4936-979F-695602F2CD83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Parsers", "CryptoBooz.Parsers\CryptoBooz.Parsers.csproj", "{53C3F2A0-5304-4936-979F-695602F2CD83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Parsers.Interfaces", "CryptoBooz.Parser.Interfaces\CryptoBooz.Parsers.Interfaces.csproj", "{6A84516F-D151-4B9A-B306-C9D42FE8937A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Parsers.Interfaces", "CryptoBooz.Parsers.Interfaces\CryptoBooz.Parsers.Interfaces.csproj", "{6A84516F-D151-4B9A-B306-C9D42FE8937A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBooz.Client.Interfaces", "CryptoBooz.Client.Interfaces\CryptoBooz.Client.Interfaces.csproj", "{EB31EE06-54CD-4076-82A7-7CA8DE2C351F}"
 EndProject
