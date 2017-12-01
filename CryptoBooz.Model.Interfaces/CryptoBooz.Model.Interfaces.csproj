@@ -11,6 +11,7 @@
     <AssemblyName>CryptoBooz.Model.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAccount.cs" />
     <Compile Include="IBoozDirectory.cs" />
     <Compile Include="ICreated.cs" />
     <Compile Include="IDeleted.cs" />
+    <Compile Include="IExchange.cs" />
     <Compile Include="IHaveId.cs" />
+    <Compile Include="IProxy.cs" />
     <Compile Include="IUsed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

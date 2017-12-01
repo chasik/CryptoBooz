@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using CryptoBooz.Client.Interfaces;
 using CryptoBooz.Client.Model;
 using GalaSoft.MvvmLight;
 

@@ -10,11 +10,15 @@
 */
 
 using System;
+using CryptoBooz.Client.Interfaces;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using CryptoBooz.Client.Model;
 using CryptoBooz.Client.Services;
+using CryptoBooz.Model;
+using CryptoBooz.Parsers;
+using CryptoBooz.Parsers.Interfaces;
 
 namespace CryptoBooz.Client.ViewModel
 {
@@ -37,7 +41,10 @@ namespace CryptoBooz.Client.ViewModel
             }
             else
             {
+                SimpleIoc.Default.Register<BoozContext>();
                 SimpleIoc.Default.Register<IDataService, DataService>();
+
+                SimpleIoc.Default.Register<IParser, Parser>();
             }
 
             SetupNavigation();

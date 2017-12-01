@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System.Reflection;
+using CryptoBooz.Client.Interfaces;
+using GalaSoft.MvvmLight;
 using CryptoBooz.Client.Model;
 using CryptoBooz.Client.Services;
 using GalaSoft.MvvmLight.Command;
@@ -15,6 +17,7 @@ namespace CryptoBooz.Client.ViewModel
     {
         private string _welcomeTitle = string.Empty;
 
+        private readonly IDataService _dataService;
         private readonly IFrameNavigationService _navigationService;
 
         private RelayCommand _exchangesCommand;
@@ -37,19 +40,11 @@ namespace CryptoBooz.Client.ViewModel
         /// </summary>
         public MainViewModel(IDataService dataService, IFrameNavigationService navigationService)
         {
+            _dataService = dataService;
             _navigationService = navigationService;
 
-            dataService.GetData(
-                (item, error) =>
-                {
-                    if (error != null)
-                    {
-                        // Report error here
-                        return;
-                    }
-
-                    WelcomeTitle = item.Title;
-                });
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            WelcomeTitle  = $"Crypto Booz  {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
         }
 
         #region | Commands |

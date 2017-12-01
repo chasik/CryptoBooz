@@ -5,7 +5,7 @@ using CryptoBooz.Model.Interfaces;
 
 namespace CryptoBooz.Model.Accounts
 {
-    public class Account : IHaveId<int>, IDeleted
+    public class Account : IAccount
     {
         public int Id { get; set; }
 

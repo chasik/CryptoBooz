@@ -1,4 +1,4 @@
-﻿using CryptoBooz.Client.Model;
+﻿using CryptoBooz.Client.Interfaces;
 using GalaSoft.MvvmLight;
 
 namespace CryptoBooz.Client.ViewModel

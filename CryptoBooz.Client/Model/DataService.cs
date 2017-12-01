@@ -1,17 +1,29 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CryptoBooz.Client.Interfaces;
+using CryptoBooz.Model;
+using CryptoBooz.Model.Exchanges;
 
 namespace CryptoBooz.Client.Model
 {
     public class DataService : IDataService
     {
-        public void GetData(Action<DataItem, Exception> callback)
+        private readonly BoozContext _context;
+
+        public DataService(BoozContext context)
         {
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            _context = context;
+        }
 
-            var item = new DataItem($"Crypto Booz  {version.Major}.{version.Minor}.{version.Build}.{version.Revision}");
+        public Task<List<Exchange>> Exchanges()
+        {
+            return Task.Factory.StartNew(() => _context.Exchanges.ToList());
+        }
 
-            callback(item, null);
+        public void CommitChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }
