@@ -1,4 +1,5 @@
-﻿using CryptoBooz.Model.Interfaces;
+﻿using System;
+using CryptoBooz.Model.Interfaces;
 
 namespace CryptoBooz.Parsers.Interfaces
 {

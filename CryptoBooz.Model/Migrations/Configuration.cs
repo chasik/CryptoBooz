@@ -15,8 +15,8 @@ namespace CryptoBooz.Model.Migrations
         {
 
             context.Exchanges.AddOrUpdate(
-                new Exchange { Id = (short)ExchangeEnum.Yobit, Name = "YObit.net", BaseUrl = "https://yobit.net" },
-                new Exchange { Id = (short)ExchangeEnum.Exmo, Name = "Exmo.me", BaseUrl = "https://exmo.me" }
+                new Exchange { Id = (short)ExchangeEnum.Yobit, Name = "YObit.net", BaseUrl = "https://yobit.net", AccountsParseUrl = "https://yobit.net/ajax/system_chat.php" },
+                new Exchange { Id = (short)ExchangeEnum.Exmo, Name = "Exmo.me", BaseUrl = "https://exmo.me", AccountsParseUrl = "https://exmo.me/ctrl/chatInit" }
             );
 
             base.Seed(context);

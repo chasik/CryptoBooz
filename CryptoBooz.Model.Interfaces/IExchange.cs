@@ -4,6 +4,8 @@
     {
         string BaseUrl { get; set; }
 
+        string AccountsParseUrl { get; set; }
+
         bool AccountParsingStarted { get; set; }
     }
 }

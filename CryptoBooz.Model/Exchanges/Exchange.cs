@@ -15,6 +15,8 @@ namespace CryptoBooz.Model.Exchanges
 
         public string BaseUrl { get; set; }
 
+        public string AccountsParseUrl { get; set; }
+
         public bool AccountParsingStarted { get; set; }
 
         public virtual ICollection<Account> Accounts { get; set; }

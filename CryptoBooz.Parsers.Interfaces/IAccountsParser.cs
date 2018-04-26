@@ -3,5 +3,7 @@
     public interface IAccountsParser
     {
         short ExchangeId { get; set; }
+        void Start();
+        void Stop();
     }
 }

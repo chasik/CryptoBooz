@@ -31,12 +31,20 @@ namespace CryptoBooz.Parsers
 
         public IAccountsParser StartParsingAccountsFromChat(IExchange exchange)
         {
-            return GetAccountsParserInstance(exchange);
+            var parser = GetAccountsParserInstance(exchange);
+
+            parser.Start();
+
+            return parser;
         }
 
         public IAccountsParser StopParsingAccountsFromChat(IExchange exchange)
         {
-            return GetAccountsParserInstance(exchange);
+            var parser = GetAccountsParserInstance(exchange);
+
+            parser.Stop();
+
+            return parser;
         }
     }
 }
